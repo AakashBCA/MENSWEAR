@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENS WEAR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/Logo.jpg">
+    <!-- glidejs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        .cart-msg{
+            display: inline-block;
+            background:#088178  ;
+            color: white;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+            padding: 15px 25px 15px 25px;
+            border-radius: 10px;
+            opacity: 0;
+         }
+         .cart-msg.active{
+            opacity: 1;
+            z-index: 15;
+         }
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+
+
+    <section id="header">
+        <a href="#" class="logo">MENS WEAR</a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <div id="lgbag"><i class="fas fa-bag-shopping"></i>
+                        <span class="cart-item-count"></span>
+                    </div>
+                </li>
+                <li><a href="#"><i id="lens1" class="search fa fa-search"></i></a></li>
+                <a href="#" id="close"><i class="fa fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="#"><i id="lens" class="search fa fa-search"></i></a>
+            <div id="mgbag"><i class="fas fa-bag-shopping"></i>
+                <span class="cart-item-count1"></span>
+            </div>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+
+    <div id="search">
+        <div class="input">
+            <input type="text" placeholder="Search..." id="txt" onkeyup="search()">
+            <i class=" clear fa fa-times"></i>
+        </div>
+    </div>
+
+    <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+            <!-- <div class="cart-box">
+                <img src="img/p-1.jpg" class="cart-img">
+                <div class="cart-detail">
+                    <h2 class="cart-product-title">Polo Tshirt</h2>
+                    <span class="cart-price">Rs.1119</span>
+                    <div class="cart-quantity">
+                        <button id="decrement">-</button>
+                        <span class="number">1</span>
+                        <button id="increment">+</button>
+                    </div>
+                </div>
+                <i class="far fa-times-circle cart-remove"></i>
+            </div> -->
+        </div>
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">0</div>
+        </div>
+        <button class="btn-buy" onclick="sendToWhatsApp()">Buy Now</button>
+        <i class="fa fa-times" id="cart-close"></i>
+    </div>
+
+    <div class="cart-msg">
+        <p>Added to Cart</p>
+    </div>
+
+    <section class="shop">
+
+        <h1 class="section-title" data-aos="zoom-in" data-aos-delay="300">Shirts</h1>
+        <div class="product-content" >
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/shirt-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Shirt</h2>
+                <div class="price-and-cart">
+                    <span>Rs.2419</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="pdetails.html"><img src="img/f-shirt-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Full Sleave Shirt</h2>
+                <div class="price-and-cart">
+                    <span>Rs.2629</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/printed shirt 1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Printed Shirt</h2>
+                <div class="price-and-cart">
+                    <span>Rs.3090</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/os-shirt-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Oversized Shirt</h2>
+                <div class="price-and-cart">
+                    <span>Rs.2999</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/linen printed shirt 1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Linen Shirt</h2>
+                <div class="price-and-cart">
+                    <span>Rs.4449</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <h1 class="section-title" data-aos="zoom-in" data-aos-delay="300">T's & SweartShirt</h1>
+        <div class="product-content">
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/p-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Polo Tshirt</h2>
+                <div class="price-and-cart">
+                    <span>Rs.1119</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/p-f-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Full SleavePolo Tshirt</h2>
+                <div class="price-and-cart">
+                    <span>Rs.1359</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/r-t-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Round Neck Tshirt</h2>
+                <div class="price-and-cart">
+                    <span>Rs.1229</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/s-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">SweartShirt</h2>
+                <div class="price-and-cart">
+                    <span>Rs.2119</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/h-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Hoodie</h2>
+                <div class="price-and-cart">
+                    <span>Rs.2449</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="section-title" data-aos="zoom-in" data-aos-delay="300">Shorts</h1>
+        <div class="product-content">
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/c-s-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Cotton Shorts</h2>
+                <div class="price-and-cart">
+                    <span>Rs.999</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/l-s-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Linen Shortt</h2>
+                <div class="price-and-cart">
+                    <span>Rs.1459</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/d-s-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Denim Shorts</h2>
+                <div class="price-and-cart">
+                    <span>Rs.999</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/bermuda shorts 1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Bermuda Shorts</h2>
+                <div class="price-and-cart">
+                    <span>Rs.1519</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/striped shorts 1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Striped Shorts</h2>
+                <div class="price-and-cart">
+                    <span>Rs.2449</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+        </div>
+
+        
+        <h1 class="section-title" data-aos="zoom-in" data-aos-delay="300">Trousers</h1>
+        <div class="product-content">
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/cargo pant k 1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Cargo Pant</h2>
+                <div class="price-and-cart">
+                    <span>Rs.3219</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/os-j-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Over Sized Joggers</h2>
+                <div class="price-and-cart">
+                    <span>Rs.2449</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/trousers-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Trousers</h2>
+                <div class="price-and-cart">
+                    <span>Rs.3000</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/chinos-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Chinos</h2>
+                <div class="price-and-cart">
+                    <span>Rs.2325</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/j-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Joggers</h2>
+                <div class="price-and-cart">
+                    <span>Rs.2225</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="section-title" data-aos="zoom-in" data-aos-delay="300">Accessories</h1>
+        <div class="product-content">
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/sneaker 1.jpg" ></a>
+                </div>
+                <h2 class="product-title">White Sneaker</h2>
+                <div class="price-and-cart">
+                    <span>Rs.3229</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/belt 1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Leather Belt</h2>
+                <div class="price-and-cart">
+                    <span>Rs.1449</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/metal chain.jpg" ></a>
+                </div>
+                <h2 class="product-title">Metal Chain</h2>
+                <div class="price-and-cart">
+                    <span>Rs.1299</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/neck chain.jpg" ></a>
+                </div>
+                <h2 class="product-title">Neck Chain</h2>
+                <div class="price-and-cart">
+                    <span>Rs.2199</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/scarf.jpg" ></a>
+                </div>
+                <h2 class="product-title">Fringed Scarf</h2>
+                <div class="price-and-cart">
+                    <span>Rs.2350</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    
+     <!-- footer -->
+
+     <section id="newsletter" data-aos="fade-up" data-aos-delay="200">
+        <div class="newstext">
+            <h4 class="sign">Sign Up For Exclisive Updates</h4>
+            <p class="p2">Get E-mail updates about our latest shop and <span class="offer">special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="E-mail address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <p class="footlogo" data-aos="fade-right" data-aos-delay="300">MENS WEAR</p>
+    <footer class="section-p1">
+        <div class="col1" data-aos="zoom-in" data-aos-delay="300">
+            <h4>Contact</h4>
+            <p class="p"> <strong>Address:</strong> No.45, Ranganathan Street,T. Nagar, CHennai, TN, 600017</p>
+            <p class="p"> <strong>Phone:</strong>1800-202-9898</p>
+            <p class="p"> <strong>Offline time</strong> 7.AM - 8.PM</p>
+            <div class="follow">
+                <h4>Fallow Us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col2" data-aos="zoom-in" data-aos-delay="350">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col3" data-aos="zoom-in" data-aos-delay="400">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col4" data-aos="zoom-in" data-aos-delay="450">
+            <h4>Install App</h4>
+            <p class="p">From App Store or Google Play</p>
+            <div class="row">
+                <i class="fa-brands fa-google-play"></i>
+                <i class="fa-brands fa-app-store-ios"></i>
+            </div>
+            <p class="p">Secured Payment Gateways</p>
+            <div class="row">
+                <i class="fa-brands fa-google-pay"></i>
+                <i class="fa-brands fa-paypal"></i>
+                <i class="fa-brands fa-apple-pay"></i>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <!-- scriptjs -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+     <script>
+        AOS.init();
+     </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

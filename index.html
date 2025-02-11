@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENS WEAR</title>
+    <link rel="icon" href="./Logo.jpg">
+
+    <style>
+        
+
+        .logo_container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 98vw;
+            height: 100vh;
+            position: absolute;
+        }
+        button{
+            position: relative;
+            padding: 15px;
+            height: 47px;
+            z-index: 1;
+            bottom: 120px;
+            width: 95px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        .layer{
+            background-color: black;
+            height: 100%;
+            width: 0%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 5px;
+            z-index: -1;
+            transition: 0.5s;
+        }
+        button:hover .layer{
+            width: 100%;
+        }
+        button:hover{
+            border: none;
+            color: white;
+        }
+        
+        @media only screen and (max-width: 1100px){
+            .logo_container{
+                width: 98%;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+    .img {
+        background-size: 400px 400px; 
+        height: 400px;
+        width: 400px;
+    }
+
+    button {
+        bottom: 80px;
+        width: 80px;  
+        height: 40px; 
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .logo_container img {
+        
+        height: 300px;
+        width: 300px;
+    }
+
+    button {
+        bottom: 60px; 
+        width: 90px;  
+        height: 35px; 
+        padding: 10px;
+    }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo_container">
+        <img src="img/Logo.jpg" alt="">
+        <button id="explore"><span class="layer"></span>explore</button>
+    </div>
+
+    <script>
+        document.getElementById("explore").addEventListener("click",function(){
+        window.location.href="home.html";
+    });
+    </script>
+    
+</body>
+</html>

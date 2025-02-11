@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENS WEAR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="pdetails.css">
+    <link rel="icon" href="img/Logo.jpg">
+    <!-- glidejs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- header -->
+
+    <section id="header">
+        <a href="#" class="logo">MENS WEAR</a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <div id="lgbag"><i class="fas fa-bag-shopping"></i>
+                        <span class="cart-item-count"></span>
+                    </div>
+                </li>
+                <a href="#" id="close"><i class="fa fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            
+            <div id="mgbag"><i class="fas fa-bag-shopping"></i>
+                <span class="cart-item-count1"></span>
+            </div>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+            <!-- <div class="cart-box">
+                <img src="img/p-1.jpg" class="cart-img">
+                <div class="cart-detail">
+                    <h2 class="cart-product-title">Polo Tshirt</h2>
+                    <span class="cart-price">Rs.1119</span>
+                    <div class="cart-quantity">
+                        <button id="decrement">-</button>
+                        <span class="number">1</span>
+                        <button id="increment">+</button>
+                    </div>
+                </div>
+                <i class="far fa-times-circle cart-remove"></i>
+            </div> -->
+        </div>
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">0</div>
+        </div>
+        <button class="btn-buy" onclick="sendToWhatsApp()">Buy Now</button>
+        <i class="fa fa-times" id="cart-close"></i>
+    </div>
+
+    <div class="cart-msg">
+        <p>Added to Cart</p>
+    </div>
+
+    <section id="prodetails">
+        <div class="single-pro-image">
+            <img src="img/f-shirt-1.jpg" width="100%" id="main-img" class="pro-img">
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="img/f-shirt-b-1.jpg" width="100%" class="smallimg">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/f-shirt-bl-1.jpg" width="100%" class="smallimg">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/f-shirt-w-1.jpg" width="100%" class="smallimg">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/f-shirt-br-1.jpg" width="100%" class="smallimg">
+                </div>
+            </div>
+        </div>
+
+        <div class="single-pro-details">
+            <h6>Zara / Shirt</h6>
+            <h4 class="pro-name">Full Sleeve Shirt</h4>
+            <h2 class="pro-price">Rs.2419</h2>
+            <select>
+                <option>Select Size</option>
+                <option>XL</option>
+                <option>L</option>
+                <option>M</option>
+                <option>S</option>
+            </select>
+            <input type="number" value="1">
+            <button class="btn-buy">Add To Cart</button>
+            <h1>Product Details</h1>
+            <h3>Material & Fabric</h3>
+            <p>> 100% Cooton <br>> Soft, breathable and skin-friendly</p>
+            <h3>Design & Fit</h3>
+            <p>> Sleeve: Half sleeve <br>> Fit: Regular fit <br>> Pattern: Plain</p>
+            <h3>Care Instruction</h3>
+            <p>> Machine washable or hand washable <br>> Avoid harsh detergents to maintain fabric quality <br>> Iron on
+                low heat if needed</p>
+        </div>
+    </section>
+
+    <section class="shop">
+
+        <h1 class="section-title" data-aos="zoom-in" data-aos-delay="300">Related Products</h1>
+        <div class="product-content">
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="pdetails.html"><img src="img/shirt-1.jpg" ></a>
+                </div>
+                <h2 class="product-title">Shirt</h2>
+                <div class="price-and-cart">
+                    <span>Rs.2419</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/printed shirt 1.jpg"></a>
+                </div>
+                <h2 class="product-title">Printed Shirt</h2>
+                <div class="price-and-cart">
+                    <span>Rs.3090</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/os-shirt-1.jpg"></a>
+                </div>
+                <h2 class="product-title">Oversized Shirt</h2>
+                <div class="price-and-cart">
+                    <span>Rs.2999</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+            <div class="product-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="img-box">
+                    <a href="#"><img src="img/linen printed shirt 1.jpg"></a>
+                </div>
+                <h2 class="product-title">Linen Shirt</h2>
+                <div class="price-and-cart">
+                    <span>Rs.4449</span>
+                    <i class="fas fa-shopping-cart add-cart"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- footer -->
+
+     <section id="newsletter" data-aos="fade-up" data-aos-delay="200">
+        <div class="newstext">
+            <h4 class="sign">Sign Up For Exclisive Updates</h4>
+            <p class="p2">Get E-mail updates about our latest shop and <span class="offer">special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="E-mail address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <p class="footlogo" data-aos="fade-right" data-aos-delay="300">MENS WEAR</p>
+    <footer class="section-p1">
+        <div class="col1" data-aos="zoom-in" data-aos-delay="300">
+            <h4>Contact</h4>
+            <p class="p"> <strong>Address:</strong> No.45, Ranganathan Street,T. Nagar, CHennai, TN, 600017</p>
+            <p class="p"> <strong>Phone:</strong>1800-202-9898</p>
+            <p class="p"> <strong>Offline time</strong> 7.AM - 8.PM</p>
+            <div class="follow">
+                <h4>Fallow Us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col2" data-aos="zoom-in" data-aos-delay="350">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col3" data-aos="zoom-in" data-aos-delay="400">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col4" data-aos="zoom-in" data-aos-delay="450">
+            <h4>Install App</h4>
+            <p class="p">From App Store or Google Play</p>
+            <div class="row">
+                <i class="fa-brands fa-google-play"></i>
+                <i class="fa-brands fa-app-store-ios"></i>
+            </div>
+            <p class="p">Secured Payment Gateways</p>
+            <div class="row">
+                <i class="fa-brands fa-google-pay"></i>
+                <i class="fa-brands fa-paypal"></i>
+                <i class="fa-brands fa-apple-pay"></i>
+            </div>
+        </div>
+
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+     <script>
+        AOS.init();
+        function sendToWhatsApp() {
+        let phone = "+91123456789"; // Replace with actual number
+        let productName = "POLO TSHIRT"; // Replace with dynamic data
+        let price = "100"; // Replace with dynamic data
+        let imageUrl = "https://aakashbca.github.io/menswear/img/shirt-1.jpg"; // Replace with actual image URL
+    
+        // Use backticks for template literals and properly format the message
+        let message = encodeURIComponent(`Check Out This Product: ${productName}\nPrice: $${price}\nImage URL: ${imageUrl}`);
+        let url = `https://wa.me/${phone}?text=${message}`;
+        
+        // Open the WhatsApp link
+        window.open(url, "_blank");
+    }
+     </script>
+    
+    
+    <script>
+        //hamburger menu
+
+const bar = document.getElementById('bar');
+const close = document.getElementById('close');
+const nav = document.getElementById('navbar');
+if(bar){
+    bar.addEventListener('click',() => {
+        nav.classList.add('active')
+    })
+}
+
+if(close){
+    close.addEventListener('click',() => {
+        nav.classList.remove('active')
+    })
+}
+
+    //cart
+
+
+const cartIcon = document.querySelector("#lgbag");
+const cart = document.querySelector(".cart");
+const cartClose = document.querySelector("#cart-close");
+const cartIcon2 = document.querySelector("#mgbag");
+
+cartIcon.addEventListener("click", () => cart.classList.add("active"));
+cartIcon2.addEventListener("click", () => cart.classList.add("active"));
+cartClose.addEventListener("click", () => cart.classList.remove("active"));
+
+const addCartButtons = document.querySelectorAll(".add-cart");
+const cartContent = document.querySelector(".cart-content");
+
+addCartButtons.forEach(button => {
+    button.addEventListener("click", event => {
+        const productBox = event.target.closest(".product-box");
+        addToCart(productBox);
+    });
+});
+
+
+const addToCart = productBox => {
+    const productImgSrc = productBox.querySelector("img").src;
+    const productTitle = productBox.querySelector(".product-title").textContent;
+    const productPrice = productBox.querySelector(".price-and-cart span").textContent;
+
+    const cartItems = cartContent.querySelectorAll(".cart-product-title");
+    for (let item of cartItems) {
+        if (item.textContent === productTitle) {
+            alert("This item is already in the cart.");
+            return; // Stop if the item is already in cart
+        }
+    }
+
+    const cartBox = document.createElement("div");
+    cartBox.classList.add("cart-box");
+    cartBox.innerHTML = `
+        <img src="${productImgSrc}" class="cart-img">
+        <div class="cart-detail">
+            <h2 class="cart-product-title">${productTitle}</h2>
+            <span class="cart-price">${productPrice}</span>
+            <div class="cart-quantity">
+                <button class="decrement">-</button>
+                <span class="number">1</span>
+                <button class="increment">+</button>
+            </div>
+        </div>
+        <i class="far fa-times-circle cart-remove"></i>
+    `;
+
+    // Add event listeners for the newly created buttons
+    const incrementButton = cartBox.querySelector(".increment");
+    const decrementButton = cartBox.querySelector(".decrement");
+    const quantityDisplay = cartBox.querySelector(".number");
+    const removeButton = cartBox.querySelector(".cart-remove");
+
+    incrementButton.addEventListener("click", () => {
+        let quantity = parseInt(quantityDisplay.textContent);
+        quantityDisplay.textContent = quantity + 1;
+        updateTotalPrice();
+    });
+
+    decrementButton.addEventListener("click", () => {
+        let quantity = parseInt(quantityDisplay.textContent);
+        if (quantity > 1) {
+            quantityDisplay.textContent = quantity - 1;
+        }
+        updateTotalPrice();
+    });
+
+    // Add event listener for remove button
+    removeButton.addEventListener("click", () => {
+        cartBox.remove();
+        updateTotalPrice(); // Update total price after removal
+        updateCartCount(-1); // Update cart count after removal
+    });
+
+    // Add the cart box to the cart content
+    cartContent.appendChild(cartBox);
+
+    // Update total price and cart item count after adding to cart
+    updateTotalPrice();
+    updateCartCount(1); // Increase cart count when an item is added
+};
+
+// Function to sum up total prices from all items in the cart
+const updateTotalPrice = () => {
+    const totalPriceDisplay = document.querySelector(".total-price");
+    let total = 0;
+    const cartBoxes = cartContent.querySelectorAll(".cart-box");
+
+    cartBoxes.forEach(box => {
+        const priceText = box.querySelector(".cart-price").textContent;
+        const quantity = parseInt(box.querySelector(".number").textContent);
+        const price = parseFloat(priceText.replace(/Rs./g, '').trim()); // Convert price string to float
+        total += price * quantity;
+    });
+
+    totalPriceDisplay.textContent = `Rs.${total.toFixed(2)}`; // Format total price
+};
+
+// notification
+
+let cartItemCount = 0;
+let cartItemCount1 = 0;
+
+function updateCartCount(change) {
+    const cartItemCountBadge = document.querySelector(".cart-item-count");
+    const cartItemCountBadge1 = document.querySelector(".cart-item-count1");
+    if (!cartItemCountBadge || !cartItemCountBadge1) {
+        console.error("Cart badge elements not found.");
+        return;
+    }
+    cartItemCount += change;
+    cartItemCount1 += change;
+    if (cartItemCount > 0 || cartItemCount1 > 0) {
+        cartItemCountBadge.style.visibility = "visible";
+        cartItemCountBadge.textContent = cartItemCount;
+        cartItemCountBadge1.style.visibility = "visible";
+        cartItemCountBadge1.textContent = cartItemCount1;
+    } else {
+        cartItemCountBadge.style.visibility = "hidden";
+        cartItemCountBadge.textContent = "";
+        cartItemCountBadge1.style.visibility = "hidden";
+        cartItemCountBadge1.textContent = "";
+    }
+}
+
+    // Remove the lgbag in hamburgermenu
+document.querySelector("#bar").addEventListener("click", function() {
+    const homeLink = document.querySelector("#lgbag");
+    if (homeLink) {
+        homeLink.remove();
+    }
+});
+document.querySelector("#bar").addEventListener("click", function() {
+    const searchLink = document.querySelector("#lens1");
+    if (searchLink) {
+        searchLink.remove();
+    }
+});
+
+        var MainImg = document.getElementById("main-img");
+        var smallimg1 = document.getElementsByClassName("smallimg");
+
+        smallimg1[0].onclick = function () {
+            MainImg.src = smallimg1[0].src
+        }
+        smallimg1[1].onclick = function () {
+            MainImg.src = smallimg1[1].src
+        }
+        smallimg1[2].onclick = function () {
+            MainImg.src = smallimg1[2].src
+        }
+        smallimg1[3].onclick = function () {
+            MainImg.src = smallimg1[3].src
+        }
+// Ensure the input value doesn't go below 1
+const quantityInput = document.querySelector("input[type='number']");
+if (quantityInput) {
+    quantityInput.addEventListener('input', () => {
+        if (parseInt(quantityInput.value) < 1) {
+            quantityInput.value = 1; // prevent negative or zero input
+        }
+    });
+}
+
+    //add cart msg
+const addCartBtns = document.querySelectorAll('.add-cart');
+const cartmsg = document.querySelector('.cart-msg');
+
+// Adding event listener to each add-to-cart button
+addCartBtns.forEach(function(btn) {
+btn.addEventListener('click', function(event) {
+    const productBox = event.target.closest('.product-box');
+    const productName = productBox.querySelector('.product-title').innerText;
+    const productPrice = productBox.querySelector('.price-and-cart span').innerText;
+    const productImage = productBox.querySelector('img').src;
+    cartmsg.classList.add('active');
+    setTimeout(function() {
+        cartmsg.classList.remove('active');
+    }, 2000);
+    console.log(`Product: ${productName}, Price: ${productPrice}, Image: ${productImage}`);
+});
+});
+
+
+    </script>
+</body>
+
+</html>
